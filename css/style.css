@@ -1,48 +1,141 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
 }
 
-.contenedor {
-    height: 100%;
-    width: 100%;
-    background-color: blue;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
+body {
+    margin: 0 auto;
 }
 
-.re-read-box {
-    width: 370px;
-    height: 455px;
-    position: relative;
-    margin: 6% auto;
-    background: black;
+.logo {
+    background-color: #0B5345;
+    color: white;
     padding: 5px;
-    border-radius: 10px;
+    font-size: 10px;
 }
 
-.button.box {
-    width: 240px;
-    margin: 30px auto;
-    position: relative;
-    box-shadow: 0 0 20px 9px #e0e0e0;
-    border-radius: 30px;
+.header {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
 }
 
-.row{
-    display: flex;
-    
+.header h1 {
+    font-size: 80px;
 }
-.column-1{
-    width: 100%;
+
+.header p {
+    padding: 0 20%;
 }
-.re-header  {
-    display: flex;
-    flex-direction:column-reverse;
-    background-color: rgb(6, 84, 9);
+
+.topnav {
+    overflow: hidden;
+    border-bottom: 2px solid #D35400;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+.topnav a:hover {
+    background-color: #D35400;
     color: white;
 }
-.margin{
-    margin-left: 0%;
+
+.topnav a.active {
+    background-color: #D35400;
+    color: white;
+}
+
+.column {
+    float: left;
+    padding: 15px;
+}
+
+.texto {
+    margin: auto;
+    width: 80%;
+}
+
+.column.side {
+    width: 33.3%;
+}
+
+.column.side p {
+    padding: 20px;
+    background-color: #117A65;
+    color: white;
+}
+
+.column.centro {
+    width: 66.6%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.gallery {
+    padding: 20px;
+    float: left;
+    width: 33%;
+}
+
+.gallery img,
+.inlineImg img {
+    width: 100%;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+div.gallery:hover {
+    background-color: #D35400;
+    color: white;
+}
+
+.inlineImg {
+    padding: 20px;
+    float: left;
+    width: 33.3%;
+}
+
+.clear {
+    clear: both;
+}
+p{
+    font-size: 17px;
+}
+h3{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+    .topnav a {
+        float: none;
+    }
+    .gallery {
+        float: none;
+        margin: auto;
+        width: 80%;
+    }
+    .header {
+        padding: 5px;
+    }
+    .header p {
+        padding: 0 5%;
+    }
 }
